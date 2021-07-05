@@ -1,0 +1,101 @@
+<H1>Library With Subscribe</H1>
+<ng-container >
+  <!-- *ngIf="data$?.length > 0; else elseblock" datasource?="/assets/data.json"-->
+
+
+    <table >
+      <thead>
+        <th *ngIf="datafields.length > 0">Index</th>
+          <th *ngIf="datafields.includes('Name')">Name</th>
+          <th *ngIf="datafields.includes('Age')">Age</th>
+          <th *ngIf="datafields.includes('Address')">Address</th>
+          <th *ngIf="datafields.includes('Phone')">Phone</th>
+          <th *ngIf="datafields.includes('Gender')">Gender</th>
+          <th *ngIf="datafields.includes('Email')">Email</th>
+      </thead>
+      <tbody>
+          <tr  *ngFor="let person of data$ index as i">
+            <td *ngIf="datafields.length > 0">{{i+1}}</td>
+              <td *ngIf="datafields.includes('Name')">{{person.name}}</td>
+              <td  *ngIf="datafields.includes('Age')">{{person.age}}</td>
+              <td *ngIf="datafields.includes('Address')">{{person.address}}</td>
+              <td *ngIf="datafields.includes('Phone')">{{person.phone}}</td>
+              <td  *ngIf="datafields.includes('Gender')">{{person.gender}}</td>
+              <td *ngIf="datafields.includes('Email')">{{person.email}}</td>
+          </tr>
+      </tbody>
+
+
+</table>
+    <hr />
+
+</ng-container>
+
+    <ng-template #elseblock> No Data Availabale </ng-template>
+
+
+
+    <!-- <H1>Library With Promise</H1>
+<ng-container *ngIf="data1$?.length > 0; else elseblock">
+
+   <table>
+  <thead>
+    <th>Index</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Gender</th>
+      <th>Email</th>
+  </thead>
+  <tbody>
+      <tr  *ngFor="let person of data1$ index as i">
+        <td>{{i+1}}</td>
+          <td>{{person.name}}</td>
+          <td>{{person.age}}</td>
+          <td>{{person.address}}</td>
+          <td>{{person.phone}}</td>
+          <td>{{person.gender}}</td>
+          <td>{{person.email}}</td>
+      </tr>
+  </tbody>
+</table>
+
+    <hr />
+
+</ng-container>
+
+    <ng-template #elseblock> No Data Availabale </ng-template>
+
+
+    <H1>Library With Promise Async</H1>
+    <ng-container *ngIf="data2$?.length > 0; else elseblock">
+
+       <table>
+      <thead>
+        <th>Index</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Gender</th>
+          <th>Email</th>
+      </thead>
+      <tbody>
+          <tr  *ngFor="let person of data2$ index as i">
+            <td>{{i+1}}</td>
+              <td>{{person.name}}</td>
+              <td>{{person.age}}</td>
+              <td>{{person.address}}</td>
+              <td>{{person.phone}}</td>
+              <td>{{person.gender}}</td>
+              <td>{{person.email}}</td>
+          </tr>
+      </tbody>
+    </table>
+
+        <hr />
+
+    </ng-container>
+
+        <ng-template #elseblock> No Data Availabale </ng-template> -->
