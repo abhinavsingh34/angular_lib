@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatalibraryModule } from 'datalibrary';
+import { TableLibModule } from 'projects/table-lib/src/public-api';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { DatalibraryModule } from 'datalibrary';
   ],
   imports: [
     BrowserModule,
+    TableLibModule,
     AppRoutingModule,DatalibraryModule.forRoot()
   ],
   providers: [],

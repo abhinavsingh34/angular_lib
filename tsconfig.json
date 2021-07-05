@@ -19,6 +19,10 @@
       "datalibrary": [
         "dist/datalibrary/datalibrary",
         "dist/datalibrary"
+      ],
+      "table-lib": [
+        "dist/table-lib/table-lib",
+        "dist/table-lib"
       ]
     }
   }
